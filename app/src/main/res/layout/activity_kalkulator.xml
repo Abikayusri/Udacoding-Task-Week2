@@ -14,14 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Masukkan nilai awal"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:maxLength="12" />
 
     <EditText
         android:id="@+id/etAkhirKakulator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Masukkan nilai awal"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:maxLength="12" />
 
     <LinearLayout
         android:layout_width="match_parent"

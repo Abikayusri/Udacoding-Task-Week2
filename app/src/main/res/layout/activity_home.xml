@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorKrem"
     android:padding="16dp"
     tools:context=".HomeActivity">
 
@@ -30,10 +31,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_marginTop="8dp"
         android:id="@+id/btnKalkulator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bg_rounded_dark_krem"
         android:text="Menu Kalkulator"
         app:layout_constraintEnd_toEndOf="parent"

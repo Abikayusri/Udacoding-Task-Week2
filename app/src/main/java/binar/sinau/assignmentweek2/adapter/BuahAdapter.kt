@@ -15,7 +15,7 @@ import binar.sinau.assignmentweek2.model.Buah
  * Bismillahirrahmanirrahim
  */
 
-class BuahAdapter(private val listData: ArrayList<Buah>) :
+class BuahAdapter(private val listData: ArrayList<Buah>?) :
     RecyclerView.Adapter<BuahAdapter.ListViewHolder>() {
 
     private lateinit var onItemCallback: OnItemClickCallback
@@ -29,19 +29,18 @@ class BuahAdapter(private val listData: ArrayList<Buah>) :
         return ListViewHolder(view)
     }
 
-    override fun getItemCount(): Int = listData.size ?: 0
+    override fun getItemCount(): Int = listData?.size ?: 0
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val item = listData[position]
+        val item = listData?.get(position)
 
-        holder.imgPhoto.setImageResource(item.foto)
-        holder.tvNama.text = item.nama
-        holder.tvDesc.text = item.deskripsi
+        holder.imgPhoto.setImageResource(item?.foto ?: 0)
+        holder.tvNama.text = item?.nama
+        holder.tvDesc.text = item?.deskripsi
 
         holder.itemView.setOnClickListener {
-            onItemCallback.onItemClicked(listData[holder.adapterPosition])
+            onItemCallback.onItemClicked(listData?.get(holder.adapterPosition))
         }
-
     }
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -51,44 +50,6 @@ class BuahAdapter(private val listData: ArrayList<Buah>) :
     }
 
     interface OnItemClickCallback{
-        fun onItemClicked(data: Buah)
+        fun onItemClicked(data: Buah?)
     }
 }
-
-
-//class BuahAdapter(
-//    private val context: Context,
-//    private val data: ArrayList<Buah>,
-//    private val itemClick: OnItemClickCallback
-//) : RecyclerView.Adapter<BuahAdapter.ListViewHolder>() {
-//
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-//        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
-//
-//        return ListViewHolder(view)
-//    }
-//
-//    override fun getItemCount(): Int = data.size ?: 0
-//
-//    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-//        val item = data[position]
-//        holder.imgPhoto.setImageResource(item.foto ?: 0)
-//        holder.tvNama.text = item.nama
-//        holder.tvDesc.text = item.deskripsi
-//
-//        holder.itemView.setOnClickListener {
-//            itemClick.onItemClicked(item)
-////            Toast.makeText(context, "Kamu memilih " + data[holder.adapterPosition],Toast.LENGTH_LONG).show()
-//        }
-//    }
-//
-//    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        var imgPhoto = itemView.findViewById<ImageView>(R.id.ivImageList)
-//        var tvNama = itemView.findViewById<TextView>(R.id.tvNamaList)
-//        var tvDesc = itemView.findViewById<TextView>(R.id.tvDescList)
-//    }
-//
-//    interface OnItemClickCallback {
-//        fun onItemClicked(item: Buah?)
-//    }
-//}

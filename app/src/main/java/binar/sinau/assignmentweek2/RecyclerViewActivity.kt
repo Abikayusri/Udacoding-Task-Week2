@@ -40,10 +40,10 @@ class RecyclerViewActivity : AppCompatActivity() {
         rvBuah.adapter = listBuahAdapter
 
         listBuahAdapter.setOnItemClickCallback(object : BuahAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: Buah) {
+            override fun onItemClicked(data: Buah?) {
                 Toast.makeText(
                     this@RecyclerViewActivity,
-                    "Kamu memilih ${data.nama}",
+                    "Kamu memilih ${data?.nama}",
                     Toast.LENGTH_SHORT
                 ).show()
 
@@ -57,10 +57,10 @@ class RecyclerViewActivity : AppCompatActivity() {
                     val dDesc = this.findViewById<TextView>(R.id.tvDescDetail)
 
                     dImage.setImageResource(
-                        data.foto ?: 0
+                        data?.foto ?: 0
                     )
-                    dNama.text = data.nama
-                    dDesc.text = data.deskripsi
+                    dNama.text = data?.nama
+                    dDesc.text = data?.deskripsi
 
                     btnClose.setOnClickListener {
                         this.dismiss()
