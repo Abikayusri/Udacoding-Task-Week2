@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AssignmentWeek2</string>
+    <string name="anggur">Buah ini berbentuk bulat seperti kelereng. Ada yang berwarna ungu dan juga hijau. Biasanya rasanya asam</string>
+    <string name="apel">Buah ini berbentuk hampir berbentuk bulat. Memiliki variant warna. Jika ingin yang manis pilihlah yang berwarna merah</string>
+    <string name="brokoli">Satu ini termasuk sayuran. Memiliki bentuk seperti rambut kribo. Umumnya berwarna hijau tua</string>
+    <string name="jeruk">Buah satu ini berbentuk bulat. Jeruk memiliki warna oren. Umumnya rasanya asam, terdapat juga yang manis</string>
+    <string name="nanas">Buah ini tidak asing jika kita pernah menonoton film spongebob. Buah ini memiliki warna kuning dan rasa yang asam manis</string>
+    <string name="semangka">Buah ini berbentuk bulat seperti bola. Pada umumnya bagian dalam berwarna merah. Terdapat juga yang berwarna kuning</string>
+    <string name="timun">Satu ini termasuk sayuran. Bentuk seperti sebuah kentungan. Sayuran ini memiliki warna hijau</string>
+    <string name="tomat">Satu ini termasuk ambigu. Seharusnya termasuk buah. Tetapi jika buah entah kenapa tidak terdapat di toko buah</string>
+    <string name="wortel">Satu ini termasuk sayuran favorit yang dimakan kelinci. Warnanya adalah oren dan memiliki rasa yang tawar dan sedikit manis</string>
+
+</resources>
